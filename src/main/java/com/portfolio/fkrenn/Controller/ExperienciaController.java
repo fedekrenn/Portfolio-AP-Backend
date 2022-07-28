@@ -41,7 +41,7 @@ public class ExperienciaController {
         if (sExperiencia.existByNombreExperiencia(dtoexp.getNombreExperiencia())) {
             return new ResponseEntity(new Mensaje("Ya existe esa experiencia"), HttpStatus.BAD_REQUEST);
         }
-        Experiencia experiencia = new Experiencia(dtoexp.getNombreExperiencia(), dtoexp.getDescripcionExperiencia());
+        Experiencia experiencia = new Experiencia(dtoexp.getNombreExperiencia(), dtoexp.getDescripcionExperiencia(), dtoexp.getCompania(), dtoexp.getImgExp(), dtoexp.getStartExp(), dtoexp.getEndExp());
         sExperiencia.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Se agregó correctamente!"), HttpStatus.OK);
@@ -62,6 +62,10 @@ public class ExperienciaController {
         Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setNombreExperiencia(dtoexp.getNombreExperiencia());
         experiencia.setDescripcionExperiencia(dtoexp.getDescripcionExperiencia());
+        experiencia.setCompania(dtoexp.getCompania());
+        experiencia.setImgExp(dtoexp.getImgExp());
+        experiencia.setStartExp(dtoexp.getStartExp());
+        experiencia.setEndExp(dtoexp.getEndExp());
 
         sExperiencia.save(experiencia);
 

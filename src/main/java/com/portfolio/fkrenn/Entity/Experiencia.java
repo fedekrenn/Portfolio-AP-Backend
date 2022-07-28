@@ -13,16 +13,23 @@ public class Experiencia {
     private int id;
     private String nombreExperiencia;
     private String descripcionExperiencia;
-    
+    private String compania;
+    private String imgExp;
+    private int startExp;
+    private String endExp;
     
     //Const
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreExperiencia, String descripcionExperiencia) {
+    public Experiencia(String nombreExperiencia, String descripcionExperiencia, String compania, String imgExp, int startExp, String endExp) {
         this.nombreExperiencia = nombreExperiencia;
         this.descripcionExperiencia = descripcionExperiencia;
+        this.compania = compania;
+        this.imgExp = imgExp;
+        this.startExp = startExp;
+        this.endExp = endExp;
     }
     
     //G&S
@@ -50,4 +57,37 @@ public class Experiencia {
     public void setDescripcionExperiencia(String descripcionExperiencia) {
         this.descripcionExperiencia = descripcionExperiencia;
     }
+    
+    public String getCompania() {
+        return compania;
+    }
+    
+    public void setCompania(String compania) {
+        this.compania = compania;
+    }
+
+    public String getImgExp() {
+        return imgExp;
+    }
+
+    public void setImgExp(String imgExp) {
+        this.imgExp = imgExp;
+    }
+
+    public int getStartExp() {
+        return startExp;
+    }
+
+    public void setStartExp(int startExp) {
+        this.startExp = startExp;
+    }
+
+    public String getEndExp() {
+        return endExp;
+    }
+
+    public void setEndExp(String endExp) {
+        this.endExp = endExp;
+    }
+       
 }
