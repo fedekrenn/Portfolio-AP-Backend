@@ -1,19 +1,19 @@
 package com.portfolio.fkrenn.Service;
 
 import com.portfolio.fkrenn.Entity.Experiencia;
-import com.portfolio.fkrenn.Repository.RExperiencia;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.portfolio.fkrenn.Repository.ExperienciaRepository;
 
 @Service
 @Transactional
-public class SExperiencia {
+public class ExperienciaService {
     
     @Autowired
-    RExperiencia rExperiencia;
+    ExperienciaRepository rExperiencia;
     
     public List<Experiencia> list(){
         return rExperiencia.findAll();
