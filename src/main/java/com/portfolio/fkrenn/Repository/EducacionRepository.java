@@ -1,4 +1,3 @@
-
 package com.portfolio.fkrenn.Repository;
 
 import com.portfolio.fkrenn.Entity.Educacion;

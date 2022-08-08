@@ -1,30 +1,29 @@
-package com.portfolio.fkrenn.Entity;
+package com.portfolio.fkrenn.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-public class Persona {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+
+public class dtoPersona {
+    @NotBlank
     private String nombrePersona;
+    @NotBlank
     private String puestoPersona;
+    @NotBlank
     private String ubicacionPersona;
+    @NotBlank
     private String sobreMi;
+    
     private int telPersona;
     private String emailPersona;
     private String githubPersona;
     private String linkedinPersona;
-
+    
     //Const
-    public Persona() {
+
+    public dtoPersona() {
     }
 
-    public Persona(String nombrePersona, String puestoPersona, String ubicacionPersona, String sobreMi, int telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
+    public dtoPersona(String nombrePersona, String puestoPersona, String ubicacionPersona, String sobreMi, int telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
         this.nombrePersona = nombrePersona;
         this.puestoPersona = puestoPersona;
         this.ubicacionPersona = ubicacionPersona;
@@ -35,15 +34,7 @@ public class Persona {
         this.linkedinPersona = linkedinPersona;
     }
     
-    // G&S
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    //G&S
 
     public String getNombrePersona() {
         return nombrePersona;
