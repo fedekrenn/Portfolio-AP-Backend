@@ -7,13 +7,14 @@ import javax.persistence.Id;
 
 @Entity
 public class Persona {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombrePersona;
     private String puestoPersona;
     private String ubicacionPersona;
+    private String imgPersona;
     private String sobreMi;
     private int telPersona;
     private String emailPersona;
@@ -24,19 +25,19 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String nombrePersona, String puestoPersona, String ubicacionPersona, String sobreMi, int telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
+    public Persona(String nombrePersona, String puestoPersona, String ubicacionPersona, String imgPersona, String sobreMi, int telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
         this.nombrePersona = nombrePersona;
         this.puestoPersona = puestoPersona;
         this.ubicacionPersona = ubicacionPersona;
+        this.imgPersona = imgPersona;
         this.sobreMi = sobreMi;
         this.telPersona = telPersona;
         this.emailPersona = emailPersona;
         this.githubPersona = githubPersona;
         this.linkedinPersona = linkedinPersona;
     }
-    
-    // G&S
 
+    // G&S
     public int getId() {
         return id;
     }
@@ -67,6 +68,14 @@ public class Persona {
 
     public void setUbicacionPersona(String ubicacionPersona) {
         this.ubicacionPersona = ubicacionPersona;
+    }
+
+    public String getImgPersona() {
+        return imgPersona;
+    }
+
+    public void setImgPersona(String imgPersona) {
+        this.imgPersona = imgPersona;
     }
 
     public String getSobreMi() {

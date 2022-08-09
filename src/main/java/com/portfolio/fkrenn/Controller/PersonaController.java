@@ -46,6 +46,7 @@ public class PersonaController {
                 dtoper.getNombrePersona(),
                 dtoper.getPuestoPersona(),
                 dtoper.getUbicacionPersona(),
+                dtoper.getImgPersona(),
                 dtoper.getSobreMi(),
                 dtoper.getTelPersona(),
                 dtoper.getEmailPersona(),
@@ -73,6 +74,7 @@ public class PersonaController {
         persona.setNombrePersona(dtoper.getNombrePersona());
         persona.setPuestoPersona(dtoper.getPuestoPersona());
         persona.setUbicacionPersona(dtoper.getUbicacionPersona());
+        persona.setImgPersona(dtoper.getImgPersona());
         persona.setSobreMi(dtoper.getSobreMi());
         persona.setTelPersona(dtoper.getTelPersona());
         persona.setEmailPersona(dtoper.getEmailPersona());

@@ -11,6 +11,8 @@ public class dtoPersona {
     @NotBlank
     private String ubicacionPersona;
     @NotBlank
+    private String imgPersona;
+    @NotBlank
     private String sobreMi;
     
     private int telPersona;
@@ -23,10 +25,11 @@ public class dtoPersona {
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombrePersona, String puestoPersona, String ubicacionPersona, String sobreMi, int telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
+    public dtoPersona(String nombrePersona, String puestoPersona, String ubicacionPersona, String imgPersona, String sobreMi, int telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
         this.nombrePersona = nombrePersona;
         this.puestoPersona = puestoPersona;
         this.ubicacionPersona = ubicacionPersona;
+        this.imgPersona = imgPersona;
         this.sobreMi = sobreMi;
         this.telPersona = telPersona;
         this.emailPersona = emailPersona;
@@ -58,6 +61,14 @@ public class dtoPersona {
 
     public void setUbicacionPersona(String ubicacionPersona) {
         this.ubicacionPersona = ubicacionPersona;
+    }
+
+    public String getImgPersona() {
+        return imgPersona;
+    }
+
+    public void setImgPersona(String imgPersona) {
+        this.imgPersona = imgPersona;
     }
 
     public String getSobreMi() {
@@ -99,4 +110,6 @@ public class dtoPersona {
     public void setLinkedinPersona(String linkedinPersona) {
         this.linkedinPersona = linkedinPersona;
     }
+
+    
 }
