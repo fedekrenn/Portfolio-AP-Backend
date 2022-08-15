@@ -4,7 +4,7 @@ import com.portfolio.fkrenn.Dto.dtoPersona;
 import com.portfolio.fkrenn.Entity.Persona;
 import com.portfolio.fkrenn.Security.Controller.Mensaje;
 import com.portfolio.fkrenn.Service.PersonaService;
-import java.util.List;
+import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,11 +26,11 @@ public class PersonaController {
 
     @Autowired
     PersonaService sPersona;
-
-    @GetMapping("/lista")
-    public ResponseEntity<List<Persona>> list() {
-        List<Persona> list = sPersona.list();
-        return new ResponseEntity(list, HttpStatus.OK);
+    
+    @GetMapping("/traer-persona")
+    public ResponseEntity findPersona() {
+        Optional<Persona> myPers = sPersona.getOne(1);
+        return new ResponseEntity(myPers, HttpStatus.OK);
     }
 
     @PostMapping("/create")
