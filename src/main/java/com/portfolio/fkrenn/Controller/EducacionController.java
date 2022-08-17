@@ -38,9 +38,6 @@ public class EducacionController {
         if (StringUtils.isBlank(dtoedu.getNombreEducacion())) {
             return new ResponseEntity(new Mensaje("Debes ingresar el nombre"), HttpStatus.BAD_REQUEST);
         }
-        if (sEducacion.existByNombreEducacion(dtoedu.getNombreEducacion())) {
-            return new ResponseEntity(new Mensaje("Ya existe esa educacion"), HttpStatus.BAD_REQUEST);
-        }
 
         Educacion educacion = new Educacion(
                 dtoedu.getNombreEducacion(),
