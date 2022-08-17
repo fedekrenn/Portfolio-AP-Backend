@@ -1,6 +1,7 @@
 package com.portfolio.fkrenn.Dto;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 
 public class dtoPersona {
@@ -13,9 +14,10 @@ public class dtoPersona {
     @NotBlank
     private String imgPersona;
     @NotBlank
+    @Size(max=1000)
     private String sobreMi;
     
-    private int telPersona;
+    private long telPersona;
     private String emailPersona;
     private String githubPersona;
     private String linkedinPersona;
@@ -25,7 +27,7 @@ public class dtoPersona {
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombrePersona, String puestoPersona, String ubicacionPersona, String imgPersona, String sobreMi, int telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
+    public dtoPersona(String nombrePersona, String puestoPersona, String ubicacionPersona, String imgPersona, String sobreMi, long telPersona, String emailPersona, String githubPersona, String linkedinPersona) {
         this.nombrePersona = nombrePersona;
         this.puestoPersona = puestoPersona;
         this.ubicacionPersona = ubicacionPersona;
@@ -79,11 +81,11 @@ public class dtoPersona {
         this.sobreMi = sobreMi;
     }
 
-    public int getTelPersona() {
+    public long getTelPersona() {
         return telPersona;
     }
 
-    public void setTelPersona(int telPersona) {
+    public void setTelPersona(long telPersona) {
         this.telPersona = telPersona;
     }
 

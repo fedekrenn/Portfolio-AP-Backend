@@ -1,6 +1,7 @@
 
 package com.portfolio.fkrenn.Entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,7 @@ public class Educacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreEducacion;
+    @Column(length=1000)
     private String descripcionEducacion;
     private String establecimiento;
     private String imgEducacion;

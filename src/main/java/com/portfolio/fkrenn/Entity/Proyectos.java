@@ -1,5 +1,6 @@
 package com.portfolio.fkrenn.Entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +16,7 @@ public class Proyectos {
     private String urlRepo;
     private String urlDeploy;
     private String imgProyecto;
+    @Column(length=1000)
     private String descripcionProyecto;
     
     //Const
