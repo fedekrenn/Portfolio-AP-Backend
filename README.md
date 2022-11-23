@@ -24,10 +24,18 @@ Bienvenidos al repositorio de la parte Backend de mi trabajo final para #YoProgr
 3. Configurar el archivo application.properties_ de la ruta src/main/resources/
 
 
-4. Ejecutar la app iniciando el archivo `PortfolioApplication.Java`
+4. Ejecutar la app iniciando el archivo 
+
+    `PortfolioApplication.Java`
+
+
+
+<br>
+<br>
+<br>
 
 <h2> 🙋‍♂️ Hola, Soy Federico Krenn</h2>
-:nerd_face: Me encuentro cursando la carrera de fullstrack developer en Coderhouse 
+:nerd_face: Me encuentro cursando la carrera de fullstack developer en Coderhouse 
 <br>
 🌱 Actualmente estoy cursando Backend
 <br></br>
